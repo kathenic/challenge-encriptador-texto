@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root{
+    --Font:#E5E5E5;
+    --White:#FFFFFF;
+    --Light-Blue: #F3F5FC;
+    --Dark-Blue:#0A3871;
+    --Greey:#C5C5C5;
+    --Medium-Gray:#67808E;
+    --RGBA:rgba(0,0,0,0.08);
+    --White-Blue:#D8DFE8;
+    --Medium-Blue:#0a38718a;
+    --Gray:#343A40;
+    --Gree:#495057;
+}
+
+*{
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    background: var(--Light-Blue);
+    padding: 0;
+    margin: 0;
+}
+
+::selection{
+    background: var(--Dark-Blue);
+    color: var(--White);
+}
+
+
+body{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+header{
+    padding: 2% 0% 0% 5%;
+}
+
+main{
+    padding: 2% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.encriptador{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.encriptar{
+    padding: 3px;
+    height: 50vh;
+    font-size: 32px;
+    line-height: 150%;
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+.encriptar::placeholder,:focus{
+    color: var(--Dark-Blue);
+}
+
+.encriptador__aviso{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.img__aviso{
+    width: 16px;
+    height: 16px;
+}
+
+.botones__encriptador{
+    display: flex;
+    gap: 24px;
+}
+
+.btn__encriptar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    background: var(--Dark-Blue);
+    border: 1px solid var(--Dark-Blue);
+    border-radius: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: var(--White);
+}
+
+.btn__desencriptar{
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    background: var(--White-Blue);
+    border: 1px solid var(--Dark-Blue);
+    border-radius: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: var(--Dark-Blue);
+}
+
+.resultado{
+    width: 100%;
+    max-width: 400px;
+    height: 630px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--Font);
+    border-radius: 32px;
+    text-align: center;
+    padding: 24px;
+}
+
+.resultado__contenedor{
+    width: 100%;
+    max-width: 336;
+    margin-top: 40%;
+    background: var(--Font);
+    gap: 24px;
+}
+
+.img__muneco{
+    background: var(--Font);
+    width: 60%;
+}
+
+.texto__uno{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--Gray);
+    background: none;
+}
+
+.texto__dos{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--Gray);
+    background: none;
+}
+
+.evaluar{
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 336px;
+    height: 450px;
+    margin: 5% 0% 0% 5%;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--Gree);
+    background: transparent;
+    border-top-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border: none;
+    resize: none;
+
+}
+
+.evaluar:focus{
+    outline: none;
+}
+
+.btn__copiar{
+    width: 80%;
+    height: 67px;
+    padding: 24px;
+    margin: 0% 0% 0% 5%;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    font-size: 16px;
+    line-height: 19px;
+    background: var(--White-Blue);
+    border: 1px solid var(--Dark-Blue);
+    border-radius: 24px;
+}
+
+.btn__encriptar:hover,
+.btn__desencriptar:hover,
+.btn__copiar:hover{
+    transform: scale(0.97);
+}
+
+footer{
+    margin-top: 10px;
+    padding: 20px;
+    color: var(--Gray);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+@media(max-width: 768px) {
+    header{
+        padding: 6% 0% 0% 0%;
+    }
+    
+    main{
+        padding: 5% 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .encriptador{
+        width: 90%;
+    }
+
+    .resultado{
+        margin-top: 20px;
+        width: 80%;
+        height: 250px
+    }
+
+    .img__muneco{
+        display: none;
+    }
+
+    .resultado__contenedor{
+        margin-top: 0%;
+    }
+
+    .evaluar{
+        margin: 0% 0% 0% 5%;
+    }
+}

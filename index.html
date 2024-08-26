@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="./assets/Logo.png" alt="Logo de Alura" class="logo">
+        </header>
+
+        <main>
+            <section class="encriptador">
+                <textarea class="encriptar" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="encriptador__aviso">
+                    <img src="./assets/aviso.png" alt="Imagen aviso" class="img__aviso">
+                    <p class="texto__aviso">Solo letras minúsculas y sin acentos.</p>
+                </div>
+                <div class="botones__encriptador">
+                    <button type="submit" class="btn__encriptar">Encriptar</button>
+                    <button type="submit" class="btn__desencriptar">Desencriptar</button>
+                </div>
+            </section>
+            <section class="resultado">
+                <div class="resultado__contenedor">
+                    <img src="./assets/muneco.png" alt="Imagen muñeco" class="img__muneco">
+                    <p class="texto__uno">Ningún mensaje fue encontrado.</p>
+                    <p class="texto__dos">Ingrese el texto que deseas encriptar o desencriptar.</p>                    
+                </div>
+                <textarea type="mensaje" class="evaluar" readonly></textarea>
+                <button type="submit" class="btn__copiar">Copiar</button>
+            </section>
+
+        </main>
+
+        <footer>
+            <p class="copyright">Encriptador de Texto - desarrollado por Katherine Carvajal</p>
+        </footer>
+    </body>
+    <script src="app.js"></script>
+</html>
